@@ -325,6 +325,9 @@ const LazyCurrencyExchange = React.lazy(() =>
 const LazyCryptoDashboard = React.lazy(() =>
   import("./components/Cryptocurrencies/Dashboard/Dashboard")
 );
+const CreateClient = React.lazy(() =>
+  import("./components/Pages/Client/Profile")
+);
 const AuthLogin = React.lazy(() => import("./Authentication/Login"));
 const AuthSignup = React.lazy(() => import("./Authentication/Signup"));
 const queryClient = new QueryClient();
@@ -357,6 +360,10 @@ const Root = () => {
                   </Route>
                   {/* crytocurrency */}
                   <Route>
+                    <Route
+                      path={`${process.env.PUBLIC_URL}/client/create`}
+                      element={<CreateClient />}
+                    />
                     <Route
                       path={`${process.env.PUBLIC_URL}/crytocurrencies/buysell`}
                       element={<Buysell />}

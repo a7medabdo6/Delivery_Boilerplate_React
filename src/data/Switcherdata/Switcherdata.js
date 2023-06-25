@@ -1,19 +1,18 @@
-
 //LTR TO RTL
 export const LtrtoRtl = () => {
   document.querySelector("body").classList.add("rtl");
   document.querySelector("html[lang=en]").setAttribute("dir", "rtl");
   document.querySelector("body").classList.remove("ltr");
-  localStorage.setItem('SpruhaLtrtoRtl', true)
-  localStorage.removeItem('SpruhaRtltoLtr')
+  localStorage.setItem("SpruhaLtrtoRtl", true);
+  localStorage.removeItem("SpruhaRtltoLtr");
 };
 //RTL TO LTR
 export const RtltoLtr = () => {
   document.querySelector("body").classList.add("ltr");
   document.querySelector("html[lang=en]").setAttribute("dir", "ltr");
   document.querySelector("body").classList.remove("rtl");
-  localStorage.setItem('SpruhaRtltoLtr', true);
-  localStorage.removeItem('SpruhaLtrtoRtl');
+  localStorage.setItem("SpruhaRtltoLtr", true);
+  localStorage.removeItem("SpruhaLtrtoRtl");
 };
 //LIGHTHEADER
 export const Lightheader = () => {
@@ -73,74 +72,111 @@ export const Scrollable = () => {
 };
 //VERTICALMENU
 export const VerticalMenu = () => {
-  let li = document.querySelectorAll(".menu-icon")
-  document.querySelector('body').classList.add('leftmenu', 'main-body');
-  document.querySelector('.main-content').classList.add('side-content');
-  document.querySelector('.main-header').classList.add('sticky');
-  document.querySelectorAll('.main-container').forEach(e => e.classList.add('container-fluid'));
-  document.querySelector('.main-menu').classList.add('main-sidebar', 'main-sidebar-sticky', 'side-menu');
-  document.querySelector('.main-menu').classList.remove('main-navbar', 'hor-menu');
-  document.querySelector('.main-container-1').classList.add('main-sidebar-header');
-  document.querySelector('.main-body-1').classList.add('main-sidebar-body');
-  document.querySelector('body').classList.remove('horizontalmenu', 'horizontalmenu-hover');
-  document.querySelector('.main-header').classList.remove('hor-header');
-  document.querySelector('.main-content').classList.remove('hor-content');
-  document.querySelectorAll('.main-container').forEach(e => e.classList.remove('container'));
-  document.querySelector('.main-container-1').classList.remove('container');
-  document.querySelector('.menu-icon').classList.remove('hor-icon');
-  li.forEach(e => e.classList.add('sidemenu-icon'));
-  localStorage.setItem('Spruhavertical', true)
-  localStorage.removeItem('Spruhahorizontal')
-  localStorage.removeItem('Spruhahorizontalhover')
+  let li = document.querySelectorAll(".menu-icon");
+  document.querySelector("body").classList.add("leftmenu", "main-body");
+  document.querySelector(".main-content").classList.add("side-content");
+  document.querySelector(".main-header").classList.add("sticky");
+  document
+    .querySelectorAll(".main-container")
+    .forEach((e) => e.classList.add("container-fluid"));
+  document
+    .querySelector(".main-menu")
+    .classList.add("main-sidebar", "main-sidebar-sticky", "side-menu");
+  document
+    .querySelector(".main-menu")
+    .classList.remove("main-navbar", "hor-menu");
+  document
+    .querySelector(".main-container-1")
+    .classList.add("main-sidebar-header");
+  document.querySelector(".main-body-1").classList.add("main-sidebar-body");
+  document
+    .querySelector("body")
+    .classList.remove("horizontalmenu", "horizontalmenu-hover");
+  document.querySelector(".main-header").classList.remove("hor-header");
+  document.querySelector(".main-content").classList.remove("hor-content");
+  document
+    .querySelectorAll(".main-container")
+    .forEach((e) => e.classList.remove("container"));
+  document.querySelector(".main-container-1").classList.remove("container");
+  document.querySelector(".menu-icon").classList.remove("hor-icon");
+  li.forEach((e) => e.classList.add("sidemenu-icon"));
+  localStorage.setItem("Spruhavertical", true);
+  localStorage.removeItem("Spruhahorizontal");
+  localStorage.removeItem("Spruhahorizontalhover");
 };
 export const Horizontal = () => {
   let li = document.querySelectorAll(".menu-icon");
-  document.querySelector('body').classList.add('horizontalmenu');
-  document.querySelector('.main-content').classList.add('hor-content');
-  document.querySelector('.main-header').classList.add('hor-header');
-  document.querySelector('.main-header').classList.remove('sticky-pin');
-  document.querySelector('.main-container-1').classList.add('container');
-  document.querySelector('.main-menu').classList.add('main-navbar', 'hor-menu');
-  document.querySelectorAll('.main-container').forEach(e => e.classList.add('container'));
-  li.forEach(e => e.classList.add('hor-icon'))
-  document.querySelector('body').classList.remove('horizontalmenu-hover', 'leftmenu', 'main-body', 'default-menu');
-  document.querySelector('.main-header').classList.remove('sticky');
-  document.querySelector('.main-content').classList.remove('side-content');
-  document.querySelector('.main-container-1').classList.remove('main-sidebar-header');
-  document.querySelector('.main-menu').classList.remove('main-sidebar', 'main-sidebar-sticky', 'side-menu');
-  document.querySelector('.main-body-1').classList.remove('main-sidebar-body');
-  document.querySelectorAll('.main-container').forEach(e => e.classList.remove('container-fluid'));
-  li.forEach(e => e.classList.remove('sidemenu-icon'))
+  document.querySelector("body").classList.add("horizontalmenu");
+  document.querySelector(".main-content").classList.add("hor-content");
+  document.querySelector(".main-header").classList.add("hor-header");
+  document.querySelector(".main-header").classList.remove("sticky-pin");
+  document.querySelector(".main-container-1").classList.add("container");
+  document.querySelector(".main-menu").classList.add("main-navbar", "hor-menu");
+  document
+    .querySelectorAll(".main-container")
+    .forEach((e) => e.classList.add("container"));
+  li.forEach((e) => e.classList.add("hor-icon"));
+  document
+    .querySelector("body")
+    .classList.remove(
+      "horizontalmenu-hover",
+      "leftmenu",
+      "main-body",
+      "default-menu"
+    );
+  document.querySelector(".main-header").classList.remove("sticky");
+  document.querySelector(".main-content").classList.remove("side-content");
+  document
+    .querySelector(".main-container-1")
+    .classList.remove("main-sidebar-header");
+  document
+    .querySelector(".main-menu")
+    .classList.remove("main-sidebar", "main-sidebar-sticky", "side-menu");
+  document.querySelector(".main-body-1").classList.remove("main-sidebar-body");
+  document
+    .querySelectorAll(".main-container")
+    .forEach((e) => e.classList.remove("container-fluid"));
+  li.forEach((e) => e.classList.remove("sidemenu-icon"));
   checkHoriMenu();
   switcherArrowFn();
-  localStorage.setItem('Spruhahorizontal', true)
-  localStorage.removeItem('Spruhavertical')
-  localStorage.removeItem('Spruhahorizontalhover')
+  localStorage.setItem("Spruhahorizontal", true);
+  localStorage.removeItem("Spruhavertical");
+  localStorage.removeItem("Spruhahorizontalhover");
 };
 export const HorizontalHoverMenu = () => {
-  let li = document.querySelectorAll(".menu-icon")
-  document.querySelector('body').classList.add('horizontalmenu', 'horizontalmenu-hover');
-  document.querySelector('.main-content').classList.add('hor-content');
-  document.querySelector('.main-header').classList.add('hor-header');
-  document.querySelector('.main-header').classList.remove('sticky-pin');
-  document.querySelector('.main-menu').classList.add('main-navbar', 'hor-menu');
-  document.querySelector('.main-container-1').classList.add('container');
-  document.querySelectorAll('.main-container').forEach(e => e.classList.add('container'));
-  li.forEach(e => e.classList.add('hor-icon'))
-  document.querySelector('body').classList.remove('leftmenu', 'main-body');
-  document.querySelector('.main-header').classList.remove('sticky');
-  document.querySelector('.main-content').classList.remove('side-content');
-  document.querySelector('.main-menu').classList.remove('main-sidebar', 'main-sidebar-sticky', 'side-menu');
-  document.querySelector('.main-container-1').classList.remove('main-sidebar-header');
-  document.querySelector('.main-body-1').classList.remove('main-sidebar-body');
-  document.querySelector('body').classList.remove('default-menu');
-  document.querySelectorAll('.main-container').forEach(e => e.classList.remove('container-fluid'));
-  li.forEach(e => e.classList.remove('sidemenu-icon'))
+  let li = document.querySelectorAll(".menu-icon");
+  document
+    .querySelector("body")
+    .classList.add("horizontalmenu", "horizontalmenu-hover");
+  document.querySelector(".main-content").classList.add("hor-content");
+  document.querySelector(".main-header").classList.add("hor-header");
+  document.querySelector(".main-header").classList.remove("sticky-pin");
+  document.querySelector(".main-menu").classList.add("main-navbar", "hor-menu");
+  document.querySelector(".main-container-1").classList.add("container");
+  document
+    .querySelectorAll(".main-container")
+    .forEach((e) => e.classList.add("container"));
+  li.forEach((e) => e.classList.add("hor-icon"));
+  document.querySelector("body").classList.remove("leftmenu", "main-body");
+  document.querySelector(".main-header").classList.remove("sticky");
+  document.querySelector(".main-content").classList.remove("side-content");
+  document
+    .querySelector(".main-menu")
+    .classList.remove("main-sidebar", "main-sidebar-sticky", "side-menu");
+  document
+    .querySelector(".main-container-1")
+    .classList.remove("main-sidebar-header");
+  document.querySelector(".main-body-1").classList.remove("main-sidebar-body");
+  document.querySelector("body").classList.remove("default-menu");
+  document
+    .querySelectorAll(".main-container")
+    .forEach((e) => e.classList.remove("container-fluid"));
+  li.forEach((e) => e.classList.remove("sidemenu-icon"));
   checkHoriMenu();
   switcherArrowFn();
-  localStorage.setItem('Spruhahorizontalhover', true)
-  localStorage.removeItem('Spruhahorizontal')
-  localStorage.removeItem('Spruhavertical')
+  localStorage.setItem("Spruhahorizontalhover", true);
+  localStorage.removeItem("Spruhahorizontal");
+  localStorage.removeItem("Spruhavertical");
 };
 // Color theme
 export const LightTheme = () => {
@@ -160,9 +196,9 @@ export const LightTheme = () => {
   localStorage.removeItem("SpruhaprimaryHoverColor");
   localStorage.removeItem("SpruhaprimaryBorderColor");
   localStorage.removeItem("SpruhaprimaryTransparent");
-  localStorage.setItem('SpruhaLighttheme', true);
-  localStorage.removeItem('Spruhadark')
-  localStorage.removeItem("SpruhadarkPrimary")
+  localStorage.setItem("SpruhaLighttheme", true);
+  localStorage.removeItem("Spruhadark");
+  localStorage.removeItem("SpruhadarkPrimary");
   localStorage.removeItem("SpruhadarkprimaryTransparent");
 };
 export const dark = () => {
@@ -178,8 +214,8 @@ export const dark = () => {
   primaryOpacityVaue();
   // localStorage.clear();
 
-  localStorage.setItem('Spruhadark', true)
-  localStorage.removeItem('SpruhaLighttheme');
+  localStorage.setItem("Spruhadark", true);
+  localStorage.removeItem("SpruhaLighttheme");
   localStorage.removeItem("SpruhaprimaryColor");
   localStorage.removeItem("SpruhaprimaryHoverColor");
   localStorage.removeItem("SpruhaprimaryBorderColor");
@@ -189,14 +225,19 @@ export function checkHoriMenu() {
   let menuWidth = document.querySelector(".hor-menu");
   let menuItems = document.querySelector(".menu-nav");
   let mainSidemenuWidth = document.querySelector(".main-sidemenu");
-  let menuContainerWidth = menuWidth?.offsetWidth - mainSidemenuWidth?.offsetWidth;
-  let marginLeftValue = Math.ceil(Number(window.getComputedStyle(menuItems).marginLeft.split("px")[0]));
-  let marginRightValue = Math.ceil(Number(window.getComputedStyle(menuItems).marginRight.split("px")[0]));
-  let check = menuItems.scrollWidth + (0 - menuWidth?.offsetWidth) + menuContainerWidth;
+  let menuContainerWidth =
+    menuWidth?.offsetWidth - mainSidemenuWidth?.offsetWidth;
+  let marginLeftValue = Math.ceil(
+    Number(window.getComputedStyle(menuItems).marginLeft.split("px")[0])
+  );
+  let marginRightValue = Math.ceil(
+    Number(window.getComputedStyle(menuItems).marginRight.split("px")[0])
+  );
+  let check =
+    menuItems.scrollWidth + (0 - menuWidth?.offsetWidth) + menuContainerWidth;
   if (document.querySelector(".main-body")?.classList.contains("ltr")) {
     menuItems.style.marginRight = 0;
-  }
-  else {
+  } else {
     menuItems.style.marginLeft = 0;
   }
   if (menuItems.scrollWidth - 2 < menuWidth?.offsetWidth - menuContainerWidth) {
@@ -290,25 +331,29 @@ export function resetData() {
   let li = document.querySelectorAll(".menu-icon");
   document.querySelector("#myonoffswitch19").checked = true; //LTR
   document.querySelector("#myonoffswitch01").checked = true; //VERTICALMENU
-  document.querySelector("#myonoffswitch1").checked = true;  //LIGHT THEME
+  document.querySelector("#myonoffswitch1").checked = true; //LIGHT THEME
   document.querySelector("#myonoffswitch5").checked = true; //DARK MENU
   document.querySelector("#myonoffswitch6").checked = true; //LIGHT HEADER
   document.querySelector("#myonoffswitch9").checked = true; //FULL WIDTH
   document.querySelector("#myonoffswitch11").checked = true; //FIXED LAYOUTPOSTION
   document.querySelector("body").classList.remove("dark-theme");
   let mainContainer = document.querySelectorAll(".main-container");
-  mainContainer.forEach(e => {
+  mainContainer.forEach((e) => {
     e.classList.remove("container");
     e.classList.add("container-fluid");
-  })
+  });
   document.querySelector("body").classList.add("leftmenu");
   document.querySelector("body").classList.add("main-body");
   document.querySelector(".main-content").classList.add("side-content");
   document.querySelector(".main-header").classList.add("sticky");
-  document.querySelector(".main-menu").classList.add("main-sidebar", "main-sidebar-sticky", "side-menu");
-  document.querySelector(".main-container-1").classList.add("main-sidebar-header");
+  document
+    .querySelector(".main-menu")
+    .classList.add("main-sidebar", "main-sidebar-sticky", "side-menu");
+  document
+    .querySelector(".main-container-1")
+    .classList.add("main-sidebar-header");
   document.querySelector(".main-body-1").classList.add("main-sidebar-body");
-  document.querySelector("body").classList.add("dark-menu")
+  document.querySelector("body").classList.add("dark-menu");
   document.querySelector("body").classList.remove("rtl");
   document.querySelector("body").classList.remove("light-theme");
   document.querySelector("body").classList.remove("light-menu");
@@ -317,7 +362,9 @@ export function resetData() {
   document.querySelector(".main-content").classList.remove("hor-content");
   document.querySelector(".main-header").classList.remove("hor-header");
   document.querySelector(".main-container-1").classList.remove("container");
-  document.querySelector(".main-menu").classList.remove("main-navbar", "hor-menu");
+  document
+    .querySelector(".main-menu")
+    .classList.remove("main-navbar", "hor-menu");
   document.querySelector("body").classList.remove("color-menu");
   document.querySelector("body").classList.remove("header-dark");
   document.querySelector("body").classList.remove("color-header");
@@ -330,7 +377,7 @@ export function resetData() {
   document.querySelector("body").classList.remove("sidenav-toggled");
   document.querySelector("body").classList.remove("scrollable-layout");
   document.querySelector("body").classList.remove("horizontalmenu-hover");
-  li.forEach(e => e.classList.add('sidemenu-icon'))
+  li.forEach((e) => e.classList.add("sidemenu-icon"));
 
   primaryOpacityVaue();
 }
@@ -339,31 +386,34 @@ export function primaryOpacityVaue() {
     .getPropertyValue("--primary-bg-color")
     .trim();
   //get variable
-  let myVarVal = localStorage.getItem("SpruhaprimaryColor") || localStorage.getItem("SpruhadarkPrimary") || primaryColorVal;
+  let myVarVal =
+    localStorage.getItem("SpruhaprimaryColor") ||
+    localStorage.getItem("SpruhadarkPrimary") ||
+    primaryColorVal;
 
-  let colorData05 = hexToRgba(myVarVal || primaryColorVal, 0.05)
-  document.querySelector('html').style.setProperty('--primary005', colorData05);
+  let colorData05 = hexToRgba(myVarVal || primaryColorVal, 0.05);
+  document.querySelector("html").style.setProperty("--primary005", colorData05);
 
-  let colorData1 = hexToRgba(myVarVal || primaryColorVal, 0.2)
-  document.querySelector('html').style.setProperty('--primary02', colorData1);
+  let colorData1 = hexToRgba(myVarVal || primaryColorVal, 0.2);
+  document.querySelector("html").style.setProperty("--primary02", colorData1);
 
-  let colorData2 = hexToRgba(myVarVal || primaryColorVal, 0.3)
-  document.querySelector('html').style.setProperty('--primary03', colorData2);
+  let colorData2 = hexToRgba(myVarVal || primaryColorVal, 0.3);
+  document.querySelector("html").style.setProperty("--primary03", colorData2);
 
-  let colorData5 = hexToRgba(myVarVal || primaryColorVal, 0.5)
-  document.querySelector('html').style.setProperty('--primary05', colorData5);
+  let colorData5 = hexToRgba(myVarVal || primaryColorVal, 0.5);
+  document.querySelector("html").style.setProperty("--primary05", colorData5);
 
-  let colorData3 = hexToRgba(myVarVal || primaryColorVal, 0.7)
-  document.querySelector('html').style.setProperty('--primary07', colorData3);
+  let colorData3 = hexToRgba(myVarVal || primaryColorVal, 0.7);
+  document.querySelector("html").style.setProperty("--primary07", colorData3);
 
-  let colorData4 = hexToRgba(myVarVal || primaryColorVal, 0.8)
-  document.querySelector('html').style.setProperty('--primary08', colorData4);
+  let colorData4 = hexToRgba(myVarVal || primaryColorVal, 0.8);
+  document.querySelector("html").style.setProperty("--primary08", colorData4);
 
-  let colorData6 = hexToRgba(myVarVal || primaryColorVal, 0.1)
-  document.querySelector('html').style.setProperty('--primary01', colorData6);
+  let colorData6 = hexToRgba(myVarVal || primaryColorVal, 0.1);
+  document.querySelector("html").style.setProperty("--primary01", colorData6);
 
-  let colorData9 = hexToRgba(myVarVal || primaryColorVal, 0.9)
-  document.querySelector('html').style.setProperty('--primary09', colorData9);
+  let colorData9 = hexToRgba(myVarVal || primaryColorVal, 0.9);
+  document.querySelector("html").style.setProperty("--primary09", colorData9);
 }
 primaryOpacityVaue();
 
@@ -372,39 +422,56 @@ export function localStorageBackUp() {
   let html = document.querySelector("html")?.style;
   let body = document.querySelector("body");
 
-  if (localStorage.getItem('Spruhahorizontal')) {
-    Horizontal()
+  if (localStorage.getItem("Spruhahorizontal")) {
+    Horizontal();
     document.querySelector("#myonoffswitch02").checked = true;
-
   }
 
-  if (localStorage.getItem('Spruhahorizontalhover') !== null) {
-    HorizontalHoverMenu()
+  if (localStorage.getItem("Spruhahorizontalhover") !== null) {
+    HorizontalHoverMenu();
     document.querySelector("#myonoffswitch03").checked = true;
   }
 
-  if (localStorage.getItem('SpruhaLtrtoRtl')) {
-    LtrtoRtl()
+  if (localStorage.getItem("SpruhaLtrtoRtl")) {
+    LtrtoRtl();
     document.querySelector("#myonoffswitch20").checked = true;
   }
-  if (localStorage.getItem('Spruhadark') !== null) {
-    dark()
+  if (localStorage.getItem("Spruhadark") !== null) {
+    dark();
     document.querySelector("#myonoffswitch2").checked = true;
   }
   if (localStorage.getItem("SpruhaprimaryColor") !== null) {
     body?.classList.add("light-theme");
     document.getElementById("myonoffswitch6").checked = true;
     body?.classList.remove("dark-theme");
-    html?.setProperty("--primary-bg-color", localStorage.getItem("SpruhaprimaryColor"));
-    html?.setProperty("--primary-bg-hover", localStorage.getItem("SpruhaprimaryHoverColor"));
-    html?.setProperty("--primary-bg-border", localStorage.getItem("SpruhaprimaryBorderColor"));
+    html?.setProperty(
+      "--primary-bg-color",
+      localStorage.getItem("SpruhaprimaryColor")
+    );
+    html?.setProperty(
+      "--primary-bg-hover",
+      localStorage.getItem("SpruhaprimaryHoverColor")
+    );
+    html?.setProperty(
+      "--primary-bg-border",
+      localStorage.getItem("SpruhaprimaryBorderColor")
+    );
   }
   if (localStorage.getItem("SpruhadarkPrimary") !== null) {
     body?.classList.add("dark-theme");
     body?.classList.remove("light-theme");
-    html?.setProperty("--primary-bg-color", localStorage.getItem("SpruhadarkPrimary"));
-    html?.setProperty("--primary-bg-hover", localStorage.getItem("SpruhadarkPrimary"));
-    html?.setProperty("--primary-bg-border", localStorage.getItem("SpruhadarkPrimary"));
+    html?.setProperty(
+      "--primary-bg-color",
+      localStorage.getItem("SpruhadarkPrimary")
+    );
+    html?.setProperty(
+      "--primary-bg-hover",
+      localStorage.getItem("SpruhadarkPrimary")
+    );
+    html?.setProperty(
+      "--primary-bg-border",
+      localStorage.getItem("SpruhadarkPrimary")
+    );
   }
 }
 //horizontal-arrows
@@ -437,36 +504,42 @@ export function switcherArrowFn() {
     let menuWidth = document.querySelector(".hor-menu");
     let menuItems = document.querySelector(".menu-nav");
     let mainSidemenuWidth = document.querySelector(".main-body-1");
-    let menuContainerWidth = menuWidth?.offsetWidth - mainSidemenuWidth?.offsetWidth;
-    let marginLeftValue = Math.ceil(Number(window.getComputedStyle(menuItems).marginLeft.split("px")[0]));
-    let marginRightValue = Math.ceil(Number(window.getComputedStyle(menuItems).marginRight.split("px")[0]));
-    let check = menuItems.scrollWidth + (0 - menuWidth?.offsetWidth) + menuContainerWidth;
+    let menuContainerWidth =
+      menuWidth?.offsetWidth - mainSidemenuWidth?.offsetWidth;
+    let marginLeftValue = Math.ceil(
+      Number(window.getComputedStyle(menuItems).marginLeft.split("px")[0])
+    );
+    let marginRightValue = Math.ceil(
+      Number(window.getComputedStyle(menuItems).marginRight.split("px")[0])
+    );
+    let check =
+      menuItems.scrollWidth + (0 - menuWidth?.offsetWidth) + menuContainerWidth;
 
     if (menuWidth?.offsetWidth - menuContainerWidth > menuItems.scrollWidth) {
       document.querySelector(".slide-left")?.classList.add("d-none");
       document.querySelector(".slide-right")?.classList.add("d-none");
       menuItems.style.marginRight = 0;
       menuItems.style.marginLeft = 0;
-
-    }
-    else {
+    } else {
       document.querySelector(".slide-right")?.classList.remove("d-none");
     }
 
     if (document.querySelector("html")?.getAttribute("dir") === "rtl") {
-      if ((Math.abs(marginRightValue) < Math.abs(check)) === false && (menuWidth?.offsetWidth - menuContainerWidth < menuItems.scrollWidth)
+      if (
+        Math.abs(marginRightValue) < Math.abs(check) === false &&
+        menuWidth?.offsetWidth - menuContainerWidth < menuItems.scrollWidth
       ) {
-        menuItems.style.marginRight = -check + 'px';
+        menuItems.style.marginRight = -check + "px";
         document.querySelector(".slide-left")?.classList.remove("d-none");
       } else {
         menuItems.style.marginRight = 0;
       }
     } else {
       if (
-        (Math.abs(marginLeftValue) < Math.abs(check)) === false &&
-        (menuWidth?.offsetWidth - menuContainerWidth < menuItems.scrollWidth)
+        Math.abs(marginLeftValue) < Math.abs(check) === false &&
+        menuWidth?.offsetWidth - menuContainerWidth < menuItems.scrollWidth
       ) {
-        menuItems.style.marginLeft = -check + 'px';
+        menuItems.style.marginLeft = -check + "px";
         document.querySelector(".slide-right")?.classList.add("d-none");
       } else {
         menuItems.style.marginLeft = 0;
@@ -486,14 +559,22 @@ export function switcherArrowFn() {
     let menuWidth = document.querySelector(".hor-menu");
     let menuItems = document.querySelector(".menu-nav");
     let mainSidemenuWidth = document.querySelector(".main-body-1");
-    let menuContainerWidth = menuWidth?.offsetWidth - mainSidemenuWidth?.offsetWidth;
-    let marginLeftValue = Math.ceil(Number(window.getComputedStyle(menuItems).marginLeft.split("px")[0])) + 100;
-    let marginRightValue = Math.ceil(Number(window.getComputedStyle(menuItems).marginRight.split("px")[0])) + 100;
+    let menuContainerWidth =
+      menuWidth?.offsetWidth - mainSidemenuWidth?.offsetWidth;
+    let marginLeftValue =
+      Math.ceil(
+        Number(window.getComputedStyle(menuItems).marginLeft.split("px")[0])
+      ) + 100;
+    let marginRightValue =
+      Math.ceil(
+        Number(window.getComputedStyle(menuItems).marginRight.split("px")[0])
+      ) + 100;
 
-    if (document.querySelector('html').getAttribute('dir') === "rtl") {
+    if (document.querySelector("html").getAttribute("dir") === "rtl") {
       if (marginRightValue < 0) {
         menuItems.style.marginLeft = "0px";
-        menuItems.style.marginRight = Number(menuItems.style.marginRight.split("px")[0]) + 100 + "px";
+        menuItems.style.marginRight =
+          Number(menuItems.style.marginRight.split("px")[0]) + 100 + "px";
         document.querySelector(".slide-right")?.classList.remove("d-none");
         document.querySelector(".slide-left")?.classList.remove("d-none");
       } else {
@@ -514,16 +595,18 @@ export function switcherArrowFn() {
       subNav.forEach((e) => {
         e.style.display = "";
       });
-    }
-    else {
+    } else {
       if (marginLeftValue < 0) {
-        menuItems.style.marginLeft = Number(menuItems.style.marginLeft.split("px")[0]) + 100 + "px";
-        if (menuWidth?.offsetWidth - menuContainerWidth < menuItems.scrollWidth) {
+        menuItems.style.marginLeft =
+          Number(menuItems.style.marginLeft.split("px")[0]) + 100 + "px";
+        if (
+          menuWidth?.offsetWidth - menuContainerWidth <
+          menuItems.scrollWidth
+        ) {
           document.querySelector(".slide-left")?.classList.remove("d-none");
           document.querySelector(".slide-right")?.classList.remove("d-none");
         }
-      }
-      else {
+      } else {
         document.querySelector(".slide-left")?.classList.add("d-none");
       }
       if (marginLeftValue >= 0) {
@@ -548,12 +631,20 @@ export function switcherArrowFn() {
     let menuWidth = document.querySelector(".hor-menu");
     let menuItems = document.querySelector(".menu-nav");
     let mainSidemenuWidth = document.querySelector(".main-body-1");
-    let menuContainerWidth = menuWidth?.offsetWidth - mainSidemenuWidth?.offsetWidth;
-    let marginLeftValue = Math.ceil(Number(window.getComputedStyle(menuItems).marginLeft.split("px")[0])) - 100;
-    let marginRightValue = Math.ceil(Number(window.getComputedStyle(menuItems).marginRight.split("px")[0])) - 100;
-    let check = menuItems.scrollWidth + (0 - menuWidth?.offsetWidth) + menuContainerWidth;
+    let menuContainerWidth =
+      menuWidth?.offsetWidth - mainSidemenuWidth?.offsetWidth;
+    let marginLeftValue =
+      Math.ceil(
+        Number(window.getComputedStyle(menuItems).marginLeft.split("px")[0])
+      ) - 100;
+    let marginRightValue =
+      Math.ceil(
+        Number(window.getComputedStyle(menuItems).marginRight.split("px")[0])
+      ) - 100;
+    let check =
+      menuItems.scrollWidth + (0 - menuWidth?.offsetWidth) + menuContainerWidth;
 
-    if (document.querySelector('html').getAttribute('dir') === "rtl") {
+    if (document.querySelector("html").getAttribute("dir") === "rtl") {
       if (marginRightValue > -check) {
         menuItems.style.marginLeft = "0px";
         menuItems.style.marginRight =
@@ -577,8 +668,7 @@ export function switcherArrowFn() {
       subNav.forEach((e) => {
         e.style.display = "";
       });
-    }
-    else {
+    } else {
       if (marginLeftValue > -check) {
         // menuItems.style.marginRight = 0;
         menuItems.style.marginLeft =
@@ -629,6 +719,3 @@ export const horizontalmenusticky = () => {
   }
 };
 window.addEventListener("scroll", horizontalmenusticky);
-
-
-
